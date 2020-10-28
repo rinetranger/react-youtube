@@ -3,6 +3,7 @@ import {useLocation} from 'react-router-dom'
 import {fetchSelectedData} from '../../apis/index'
 import {Store} from '../../store/index'
 import VideoPlay from '../VideoPlay/VideoPlay'
+import Style from './VideoDetail.module.scss'
 
 const VideoDetail = () => {
     const {globalState,setGlobalState}=useContext(Store)
@@ -20,11 +21,15 @@ const VideoDetail = () => {
     useEffect(()=>{
        setSelectedVideo()
     },[])
-    return (
-
-        <div>
+    return globalState.selected && globalState.selected.id  ?(
+        <div className={Style.wrap}>
             <VideoPlay id={globalState.selected.id}/>
+            <p>{globalState.selected.snippet.title}</p>
+            <hr/>
+            <pre>{globalState.selected.snippet.description}</pre>
         </div>
+    ) :(
+        <span>No data</span>
     )
 }
 
