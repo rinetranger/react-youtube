@@ -3,9 +3,9 @@ import React from 'react'
 const Top = () => {
     return (
         <div>
-            Top
+            Toppage
         </div>
     )
 }
 
-export default Top
+export default Top;
