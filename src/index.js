@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { StoreProvider } from './store/index';  
 import App from './App';
+import 'normalize.css'
 import reportWebVitals from './reportWebVitals';
 
 
