@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
+import SideList from '../components/SideList/SideList'
 import VideoDetail from '../components/VideoDetail/VideoDetail'
 
 const Watch = () => {
@@ -7,6 +8,7 @@ const Watch = () => {
         <div>
             <Layout>
                 <VideoDetail />
+                <SideList />
             </Layout>
         </div>
     )
