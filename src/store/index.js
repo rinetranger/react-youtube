@@ -4,7 +4,8 @@ const initialState= {
     popular:[],
     related:[],
     selected:{},
-    term:''
+    term:'',
+    searched:[]
 }
 const reducer = (state,action)=>{
     switch(action.type){
@@ -16,6 +17,8 @@ const reducer = (state,action)=>{
             return {...state,selected:action.payload.selected}
         case 'SET_TERM':
             return {...state,term:action.payload.term}
+        case 'SET_SEARCH':
+        return {...state,searched:action.payload.searched}
         default:
             return state
         }
